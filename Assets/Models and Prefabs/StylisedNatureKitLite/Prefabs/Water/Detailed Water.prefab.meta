@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4db940c31d61ac149801c850fc645d68
+guid: cdafd6d66f108e740a95731699638c87
 PrefabImporter:
   externalObjects: {}
   userData: 
@@ -10,5 +10,6 @@ AssetOrigin:
   productId: 176906
   packageName: Stylized Nature Kit Lite
   packageVersion: 1.2
-  assetPath: Assets/Models and Prefabs/StylisedNatureKitLite/Prefabs/Foliage/Grass/Grass.prefab
+  assetPath: Assets/Models and Prefabs/StylisedNatureKitLite/Prefabs/Water/Detailed
+    Water.prefab
   uploadId: 705314

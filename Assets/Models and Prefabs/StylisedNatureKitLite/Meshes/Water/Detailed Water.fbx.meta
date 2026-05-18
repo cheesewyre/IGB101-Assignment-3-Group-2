@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b64664a15804c6a40b649fb352af0896
+guid: 17c4328b795601b479c1b25fa5cfbf46
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -117,5 +117,6 @@ AssetOrigin:
   productId: 176906
   packageName: Stylized Nature Kit Lite
   packageVersion: 1.2
-  assetPath: Assets/Models and Prefabs/StylisedNatureKitLite/Meshes/Foliage/Grass/Grass.fbx
+  assetPath: Assets/Models and Prefabs/StylisedNatureKitLite/Meshes/Water/Detailed
+    Water.fbx
   uploadId: 705314
