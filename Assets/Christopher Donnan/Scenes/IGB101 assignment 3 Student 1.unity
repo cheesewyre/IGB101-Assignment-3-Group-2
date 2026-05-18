@@ -409,7 +409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ab5f42ee07a0640bd8eef576392593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: IGB101 Assignment 2
+  nextLevel: IGB101 assignment 3 Christopher Donnan
 --- !u!65 &1613852
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -492,7 +492,7 @@ Transform:
   m_GameObject: {fileID: 1613850}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -138.95, y: -2.53, z: -17.54}
+  m_LocalPosition: {x: -202.5, y: -2.53, z: -17.54}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3652,7 +3652,7 @@ Transform:
   m_GameObject: {fileID: 177905501}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -193.55, y: -5.9136243, z: -21.58}
+  m_LocalPosition: {x: -185.4, y: -5.9136243, z: -21.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4347,8 +4347,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1078437896}
-  currentPickups: 5
-  maxPickups: 5
+  currentPickups: 0
+  maxPickups: 4
   levelComplete: 0
   pickupText: {fileID: 614273986}
   audioSources: []

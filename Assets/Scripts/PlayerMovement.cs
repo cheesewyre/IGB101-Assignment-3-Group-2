@@ -77,13 +77,6 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("Waving", false);
         }
-        if (Input.GetKeyDown("g"))
-        {
-            anim.SetBool("Dying", true);
-        }
-        else if (Input.GetKeyUp("f"))
-        {
-            anim.SetBool("Dying", false);
-        }
+        
     }
 }
