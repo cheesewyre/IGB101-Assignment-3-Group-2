@@ -1,34 +1,69 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class DoorControl : MonoBehaviour
 {
-    public GameObject door;
-    public float openRot, closeRot, speed;
-    public bool opening;
+    public GameObject intText;
+    public float interactionDistance;
+    public string doorOpenAnimName, doorCloseAnimName;
+    public AudioClip doorAudio;
+    public Animator playerAnim;
     // Update is called once per frame
     void Update()
     {
-        Vector3 currentRot = door.transform.localEulerAngles;
-        if (opening)
+     Ray ray = new Ray(transform.position, transform.forward);
+
+        RaycastHit hit;
+    if (Physics.Raycast(ray, out hit, interactionDistance))
         {
-            if (currentRot.y != openRot)
+            if (hit.collider.gameObject.tag == "Door")
             {
-                door.transform.localEulerAngles = Vector3.Lerp(currentRot, new Vector3(currentRot.x, openRot, currentRot.z), speed * Time.deltaTime);
+                GameObject doorParent = hit.collider.transform.root.gameObject;
+
+                Animator doorAnim = doorParent.GetComponent<Animator>();
+
+                AudioSource doorSound = hit.collider.gameObject.GetComponent<AudioSource>();
+
+                intText.SetActive(true);
+
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    doorSound.Play();
+                    
+
+                    if (doorAnim.GetBool("Open") == false)
+                    {
+                        doorAnim.SetBool("Open", true);
+                        
+                        playerAnim.SetTrigger("Open");
+                        
+                    }
+                    else
+                    {
+                        doorAnim.SetBool("Open", false);
+                        playerAnim.SetTrigger("Close");
+                        
+                    }
+                }
+            
+            }
+            else
+            {
+                intText.SetActive(false);
+                
+               
             }
         }
+            
         else
-        {
-            if (currentRot.y != closeRot)
             {
-                door.transform.localEulerAngles = Vector3.Lerp(currentRot, new Vector3(currentRot.x, closeRot, currentRot.z), speed * Time.deltaTime);
-            }
-        }
-        if (Input.GetKeyDown("f"))
-        {
-            opening = !opening;
-            door.GetComponent<AudioSource>().Play();
+                intText.SetActive(false);
+            
         }
     }
-}
+    
+        
+ }
+
