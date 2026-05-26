@@ -409,7 +409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ab5f42ee07a0640bd8eef576392593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: IGB101 assignment 3 Christopher Donnan
+  nextLevel: Pat_Scene
 --- !u!65 &1613852
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18849,14 +18849,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 251044663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3461f128cba8de146b247ec2559fed27, type: 3}
+  m_Script: {fileID: 11500000, guid: 16488aeec43811948a26aa9f7e2dbd68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1078437896}
   currentPickups: 0
   maxPickups: 4
   levelComplete: 0
-  pickupText: {fileID: 614273986}
+  pickupCounter: {fileID: 614273986}
   audioSources: []
   audioProximity: 5
 --- !u!4 &251044665

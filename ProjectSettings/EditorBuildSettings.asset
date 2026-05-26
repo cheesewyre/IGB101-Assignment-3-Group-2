@@ -8,5 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Christopher Donnan/Scenes/IGB101 assignment 3 Christopher Donnan.unity
     guid: 64ed0bc04b36be745bef62c85a5ca589
+  - enabled: 1
+    path: Assets/Troy's assets/Scenes/IGB 101 Assignment 3 Troy.unity
+    guid: e9d25e6aa354d554f9f18774db0dfb43
+  - enabled: 1
+    path: Assets/Patrick/Scenes/Pat_Scene.unity
+    guid: 6c9af5e5adab8e04b8c64aa142979753
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

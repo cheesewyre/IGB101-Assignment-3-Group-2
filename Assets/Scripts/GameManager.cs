@@ -1,25 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Player")]
     public GameObject player;
-    //Pickup and Level completion logic
+
+    [Header("Pickup Logic")]
     public int currentPickups = 0;
-    public int maxPickups = 5;
+    public int maxPickups = 3;
     public bool levelComplete = false;
-    public Text pickupText;
-    // Audio Proximity Logic
+
+    [Header("UI")]
+    public Text pickupCounter;
+
+    [Header("Audio Proximity")]
     public AudioSource[] audioSources;
-    public float audioProximity = 5.0f;
-    public void UpdateGUI()
+    public float audioProximity = 5f;
+
+    void Update()
     {
-        pickupText.text = "Pickups: " + currentPickups + "/" + maxPickups;
+        LevelCompleteCheck();
+        UpdateGUI();
+        PlayAudioSamples();
     }
 
-    private void LevelCompleteCheck()
+    void LevelCompleteCheck()
     {
         if (currentPickups >= maxPickups)
         {
@@ -30,11 +36,35 @@ public class GameManager : MonoBehaviour
             levelComplete = false;
         }
     }
-    private void PlayAudioSamples()
+
+    void UpdateGUI()
     {
+        if (pickupCounter != null)
+        {
+            pickupCounter.text = "Pickups: " + currentPickups + "/" + maxPickups;
+        }
+    }
+
+    void PlayAudioSamples()
+    {
+        if (player == null || audioSources == null)
+        {
+            return;
+        }
+
         for (int i = 0; i < audioSources.Length; i++)
         {
-            if (Vector3.Distance(player.transform.position, audioSources[i].transform.position) <= audioProximity)
+            if (audioSources[i] == null)
+            {
+                continue;
+            }
+
+            float distanceToSample = Vector3.Distance(
+                player.transform.position,
+                audioSources[i].transform.position
+            );
+
+            if (distanceToSample <= audioProximity)
             {
                 if (!audioSources[i].isPlaying)
                 {
@@ -42,18 +72,5 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        LevelCompleteCheck();
-        UpdateGUI();
     }
 }
