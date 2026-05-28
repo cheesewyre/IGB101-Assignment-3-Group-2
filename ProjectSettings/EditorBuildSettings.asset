@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Patrick/Scenes/Pat_Scene.unity
     guid: 6c9af5e5adab8e04b8c64aa142979753
+  - enabled: 1
+    path: Assets/Tristan/Scenes/Tristan Level.unity
+    guid: 8c6fa921a3d676241ae25994ca188844
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

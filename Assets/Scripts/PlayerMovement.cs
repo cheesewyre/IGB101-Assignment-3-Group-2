@@ -51,10 +51,14 @@ public class PlayerMovement : MonoBehaviour{
         }
     }
 
-    private void Actions(){
-        if(Input.GetKeyDown("e")){
+    private void Actions()
+    {
+        if(Input.GetKeyDown("e"))
+        {
             anim.SetBool("Waving", true);
-        } else if(Input.GetKeyUp("e")){
+        } 
+        else if(Input.GetKeyUp("e"))
+        {
             anim.SetBool("Waving", false);
         }
     }
